@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer TA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="daArrear.html">DA Arrear</a></li>
+            <li><a href="transferTA.html">Transfer TA</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contactUs.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="header">
+            <h1 class="title">Transfer TA</h1>
+            <p>Calculate your Transfer Traveling Allowance with ease.</p>
+        </div>
+
+        <div class="container">
+            <form>
+                <!-- Grade -->
+                <div class="form-group">
+                    <label for="grade">Grade</label>
+                    <label class="inline" for="grade1"><input type="radio" id="grade1" name="grade" value="grade1" checked> G-I</label>
+                    <label class="inline" for="grade2"><input type="radio" id="grade2" name="grade" value="grade2"> G-II</label>
+                    <label class="inline" for="grade3"><input type="radio" id="grade3" name="grade" value="grade3"> G-III</label>
+                    <label class="inline" for="grade4"><input type="radio" id="grade4" name="grade" value="grade4"> G-IV</label>
+                </div>
+
+                <!-- Family Members -->
+                <div class="form-group">
+                    <label for="family-members">Family Members</label>
+                    <label class="inline" for="with-family"><input type="radio" id="with-family" name="family-members" value="with-family" checked> With Family</label>
+                    <label class="inline" for="without-family"><input type="radio" id="without-family" name="family-members" value="without-family"> Without Family</label>
+                </div>
+
+                <!-- Place of Posting -->
+                <div class="form-group">
+                    <label for="placeOfPosting">Place of Posting</label>
+                    <label class="inline" for="within-state"><input type="radio" id="within-state" name="placeOfPosting" value="within-state" checked> Within State</label>
+                    <label class="inline" for="within-ne"><input type="radio" id="within-ne" name="placeOfPosting" value="within-ne"> Within NE</label>
+                    <label class="inline" for="outside-ne"><input type="radio" id="outside-ne" name="placeOfPosting" value="outside-ne"> Outside NE</label>
+                </div>
+
+                <!-- Basic Pay -->
+                <div class="form-group">
+                    <label for="basicPay">Basic Pay</label>
+                    <input type="number" id="basicPay" name="basicPay" required min="17400" max="151700" value="38900">
+                </div>
+
+                <!-- Distance -->
+                <div class="form-group">
+                    <label for="distance">Distance (in Km)</label>
+                    <input type="number" id="distance" name="distance" required>
+                </div>
+
+                <!-- Number of Family Members -->
+                <div class="form-group">
+                    <label for="noOfFamilyMembers">No. of Family Members</label>
+                    <input type="number" id="noOfFamilyMembers" name="noOfFamilyMembers" placeholder="Excluding Self">
+                </div>
+
+                <!-- Number of Children -->
+                <div class="form-group">
+                    <label for="children">No. of Children</label>
+                    <input type="number" id="children" name="children" placeholder="Children below 12 years">
+                </div>
+
+                <!-- Calculate Button -->
+                <div class="form-group">
+                    <button type="submit">Calculate</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 @mumz7</p>
+    </footer>
+</body>
+
+</html>

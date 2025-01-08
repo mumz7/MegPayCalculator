@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DA Arrear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="daArrear.html">DA Arrear</a></li>
+            <li><a href="transferTA.html">Transfer TA</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contactUs.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="header">
+            <h1 class="title">DA Arrear</h1>
+            <p>Compute your Dearness Allowance Arrear receivable by simply entering your Basic Pay, Increment Percentage, and Number of Months.</p>
+        </div>
+
+        <div class="container">
+            <form>
+                <!-- Subscription -->
+                <div class="form-group">
+                    <label for="subscription">Subscription</label>
+                    <label class="inline" for="nps"><input type="radio" id="nps" name="subscription" value="nps" checked> NPS</label>
+                    <label class="inline" for="gpf"><input type="radio" id="gpf" name="subscription" value="gpf"> GPF</label>
+                </div>
+
+                <!-- Basic Pay -->
+                <div class="form-group">
+                    <label for="basicPay">Basic Pay</label>
+                    <input type="number" id="basicPay" name="basicPay" required min="17400" max="151700" value="38900">
+                </div>
+
+                <!-- Increment Percentage -->
+                <div class="form-group">
+                    <label for="incrementPercentage">Increment Percentage</label>
+                    <input type="number" id="incrementPercentage" name="incrementPercentage" required value="3" min="1" max="15">
+                </div>
+
+                <!-- Number of Months -->
+                <div class="form-group">
+                    <label for="months">Number of Months</label>
+                    <input type="number" id="months" name="months" required value="5" min="1" max="12">
+                </div>
+
+                <!-- Calculate Button -->
+                <div class="form-group">
+                    <button class="submitDaArrear" type="submit">Calculate</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025. Curated by mumz7</p>
+    </footer>
+
+    <script src="daArrearScript.js"></script>
+</body>
+
+</html>
