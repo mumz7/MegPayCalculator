@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pay Calculator</title>
+    <title>Meg Pay Calculator</title>
+    <meta name="description" content="Meg Pay Calculator helps you calculate pay for Meghalaya government employees quickly and accurately.">
+<meta name="keywords" content="Pay Calculator, Meghalaya, Government Employees, Salary Calculation, Meg Pay Calculator">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,6 +16,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="daArrear.html">DA Arrear</a></li>
             <li><a href="transferTA.html">Transfer TA</a></li>
+            <li><a href="leaveEnchasment.html">Leave Enchasment</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contactUs.html">Contact</a></li>
         </ul>
@@ -26,88 +29,79 @@
             <p>The concept of the app is derived from the Fifth Meghalaya Pay Commission and is not suitable for AIS and UGC Employees.</p>
         </div>
 
-        <div class="container">
-            <form>
-                <!-- Subscription -->
-                <div class="form-group">
-                    <label for="subscription">Subscription</label>
-                    <div class="radio-input">
-                        <label class="inline" for="nps"><input type="radio" id="nps" name="subscription" value="nps" checked> NPS</label>
-                        <label class="inline" for="gpf"><input type="radio" id="gpf" name="subscription" value="gpf"> GPF</label>
+        <div class="form-container">
+            <div class="container">
+                <form id="payCalculatorForm">
+                   
+                    <div class="form-group">
+                        <label for="subscription">Subscription</label>
+                        <div class="radio-input">
+                            <label class="inline" for="nps"><input type="radio" id="nps" name="subscription" value="nps" checked> NPS</label>
+                            <label class="inline" for="gpf"><input type="radio" id="gpf" name="subscription" value="gpf"> GPF</label>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Basic Pay -->
-                <div class="form-group">
-                    <label for="basicPay">Basic Pay</label>
-                    <input type="number" id="basicPay" name="basicPay" required min="17400" max="151700" value="38900">
-                </div>
-
-                <!-- DA -->
-                <div class="form-group">
-                    <label for="da">DA</label>
-                    <input type="number" id="da" name="da" required value="46">
-                </div>
-
-                <!-- Place of Posting -->
-                <div class="form-group">
-                    <label>Place of Posting</label>
+    
+                    <!-- Basic Pay -->
+                    <div class="form-group">
+                        <label for="basicPay">Basic Pay</label>
+                        <input type="number" id="basicPay" name="basicPay" required min="17400" max="151700" value="38900">
+                    </div>
+    
+                    <!-- DA -->
+                    <div class="form-group">
+                        <label for="da">DA</label>
+                        <input type="number" id="da" name="da" required value="46">
+                    </div>
+    
+                    <!-- Place of Posting -->
+                    <div class="form-group">
+                        <label>Place of Posting</label>
                         <div class="radio-input">
                             <label class="inline" for="shillong"><input type="radio" id="shillong" name="placeOfPosting" value="shillong" checked> Shillong</label>
                             <label class="inline" for="districtHQ"><input type="radio" id="districtHQ" name="placeOfPosting" value="districtHQ"> District HQ</label>
-                            <label class="inline" for="others"><input type="radio" id="others" name="placeOfPosting" value="others"> Others</label>   
+                            <label class="inline" for="others"><input type="radio" id="others" name="placeOfPosting" value="others"> Others</label>
                         </div>
-                   
-                </div>
-
-                <!-- Winter Allowance -->
-                <div class="form-group">
-                    <label>Winter Allowance</label>
-                    <div class="radio-input">
-                        <label class="inline" for="winterAllowanceYes"><input type="radio" id="winterAllowanceYes" name="winterAllowance" value="yes"> Yes</label>
-                        <label class="inline" for="winterAllowanceNo"><input type="radio" id="winterAllowanceNo" name="winterAllowance" value="no" checked> No</label>
                     </div>
-                    
-                </div>
-
-                <!-- Nursing Allowance -->
-                <div class="form-group">
-                    <label>Nursing Allowance</label>
-                    <div class="radio-input">
-                         <label class="inline" for="nursingAllowanceYes"><input type="radio" id="nursingAllowanceYes" name="nursingAllowance" value="yes"> Yes</label>
-                        <label class="inline" for="nursingAllowanceNo"><input type="radio" id="nursingAllowanceNo" name="nursingAllowance" value="no" checked> No</label>
+    
+                    <!-- Winter Allowance -->
+                    <div class="form-group">
+                        <label>Winter Allowance</label>
+                        <div class="radio-input">
+                            <label class="inline" for="winterAllowanceYes"><input type="radio" id="winterAllowanceYes" name="winterAllowance" value="yes"> Yes</label>
+                            <label class="inline" for="winterAllowanceNo"><input type="radio" id="winterAllowanceNo" name="winterAllowance" value="no" checked> No</label>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Kit Maintenance -->
-                <div class="form-group">
-                    <label for="kitMaintenance">Kit Maintenance</label>
-                    <input type="number" id="kitMaintenance" name="kitMaintenance" min="0">
-                </div>
-
-                <!-- Calculate Button -->
-
-                <div class="form-group">
-                    <button class="submitPayCalculator" type="submit">Calculate</button>
-                </div>
+    
+                    <!-- Nursing Allowance -->
+                    <div class="form-group">
+                        <label>Nursing Allowance</label>
+                        <div class="radio-input">
+                            <label class="inline" for="nursingAllowanceYes"><input type="radio" id="nursingAllowanceYes" name="nursingAllowance" value="yes"> Yes</label>
+                            <label class="inline" for="nursingAllowanceNo"><input type="radio" id="nursingAllowanceNo" name="nursingAllowance" value="no" checked> No</label>
+                        </div>
+                    </div>
+    
+                    <!-- Kit Maintenance -->
+                    <div class="form-group">
+                        <label for="kitMaintenance">Kit Maintenance</label>
+                        <input type="number" id="kitMaintenance" name="kitMaintenance" min="0">
+                    </div>
+    
+                    <div class="form-group">
+                        <button class="submitPayCalculator" type="submit">Calculate</button>
+                    </div>
+          
             </form>
         </div>
+        
     </main>
 
-    <!--Result-->
-    <div id="resultContainer" class="container" style="display: none;">
-        <h2>Pay Calculation Result</h2>
-        <div class="result-grid">
-            <!-- Content will be dynamically inserted here -->
-        </div>
-    </div>
+    
 
     <footer>
         <p>© 2025 @mumz7</p>
     </footer>
     <script src="payCalculatorSrcipt.js"></script>
-
-   
 </body>
 
 </html>

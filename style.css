@@ -29,13 +29,13 @@ nav ul {
 
 nav ul li {
     margin: 0;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 15px 15px;
     display: block;
     transition: background 0.3s ease;
 }
@@ -57,10 +57,10 @@ header {
     color: #003366;
 }
 p {
-    font-size: 13px;
+    font-size: 12px;
     color: gray;
     margin-bottom: 10px;
-    width: 600px;
+    width: 450px;
    text-align: center;
    margin-left: auto;
    margin-right: auto;
@@ -72,12 +72,12 @@ main {
     padding: 10px;
     margin-top: 50px;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     float: center;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
     background: #fff;
     padding: 20px;
@@ -89,7 +89,7 @@ main {
 form {
     margin-top: 10px;
     text-align: left;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .form-group {
@@ -107,9 +107,9 @@ form {
 
 .form-group input[type="number"],
 .form-group input[type="radio"] {
-    font-size: 15px;
+    font-size: 13px;
     flex: 1;
-    max-width: 200;
+    max-width: 150;
     padding: 10px;
     border: 1px solid #003366;
     border-radius: 5px;
@@ -129,7 +129,7 @@ label.inline {
     font-weight: normal;
 }
 
-button.submitPayCalculator , button.submitDaArrear {
+button.submitPayCalculator , button.submitDaArrear, button.submitTransferTA, button.submitLeaveEnchasment{
     margin-top: 20px;
     font-size: 15px;
     font-weight: bold;
@@ -162,35 +162,36 @@ footer {
     background: #003366;
     color: white;
 }
-#resultContainer {
-    display: none; /* Hidden by default */
-    background: #fff;
+
+/* Overlay container */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    color: white;
+    z-index: 10; /* Ensures it's above other content */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-    text-align: left;
-}
-
-.result-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 20px;
-    margin-top: 20px;
-}
-
-.result-grid div {
-    font-size: 16px;
-    color: #333;
-}
-
-.result-grid div:nth-child(2n) {
-    text-align: right; /* Align amounts to the right */
-    font-weight: bold;
-}
-
-#resultContainer h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: #003366;
+}
+
+/* Close button */
+#closeResult {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00509e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeResult:hover {
+    background: #003366;
 }

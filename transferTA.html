@@ -14,6 +14,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="daArrear.html">DA Arrear</a></li>
             <li><a href="transferTA.html">Transfer TA</a></li>
+            <li><a href="leaveEnchasment.html">Leave Enchasment</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contactUs.html">Contact</a></li>
         </ul>
@@ -23,6 +24,8 @@
         <div class="header">
             <h1 class="title">Transfer TA</h1>
             <p>Calculate your Transfer Traveling Allowance with ease.</p>
+            <p> Transfer should be in interest of public service.
+                Transfer on own request or mutual transfer is not construed as transfer in public interest.</p>
         </div>
 
         <div class="container">
@@ -30,25 +33,34 @@
                 <!-- Grade -->
                 <div class="form-group">
                     <label for="grade">Grade</label>
-                    <label class="inline" for="grade1"><input type="radio" id="grade1" name="grade" value="grade1" checked> G-I</label>
-                    <label class="inline" for="grade2"><input type="radio" id="grade2" name="grade" value="grade2"> G-II</label>
-                    <label class="inline" for="grade3"><input type="radio" id="grade3" name="grade" value="grade3"> G-III</label>
-                    <label class="inline" for="grade4"><input type="radio" id="grade4" name="grade" value="grade4"> G-IV</label>
+                    <div>
+                        <label class="inline" for="grade1"><input type="radio" id="grade1" name="grade" value="grade1"> G-I</label>
+                        <label class="inline" for="grade2"><input type="radio" id="grade2" name="grade" value="grade2" checked> G-II</label>
+                        <label class="inline" for="grade3"><input type="radio" id="grade3" name="grade" value="grade3"> G-III</label>
+                        <label class="inline" for="grade4"><input type="radio" id="grade4" name="grade" value="grade4"> G-IV</label>
+                    </div>
+                    
                 </div>
 
                 <!-- Family Members -->
                 <div class="form-group">
                     <label for="family-members">Family Members</label>
-                    <label class="inline" for="with-family"><input type="radio" id="with-family" name="family-members" value="with-family" checked> With Family</label>
-                    <label class="inline" for="without-family"><input type="radio" id="without-family" name="family-members" value="without-family"> Without Family</label>
+                    <div>
+                        <label class="inline" for="with-family"><input type="radio" id="with-family" name="family-members" value="with-family"> With Family</label>
+                        <label class="inline" for="without-family"><input type="radio" id="without-family" name="family-members" value="without-family" checked> Without Family</label>
+                    </div>
+                    
                 </div>
 
                 <!-- Place of Posting -->
                 <div class="form-group">
                     <label for="placeOfPosting">Place of Posting</label>
-                    <label class="inline" for="within-state"><input type="radio" id="within-state" name="placeOfPosting" value="within-state" checked> Within State</label>
-                    <label class="inline" for="within-ne"><input type="radio" id="within-ne" name="placeOfPosting" value="within-ne"> Within NE</label>
-                    <label class="inline" for="outside-ne"><input type="radio" id="outside-ne" name="placeOfPosting" value="outside-ne"> Outside NE</label>
+                    <div>
+                        <label class="inline" for="within-state"><input type="radio" id="within-state" name="placeOfPosting" value="within-state" checked> Within State</label>
+                        <label class="inline" for="within-ne"><input type="radio" id="within-ne" name="placeOfPosting" value="within-ne"> Within NE</label>
+                        <label class="inline" for="outside-ne"><input type="radio" id="outside-ne" name="placeOfPosting" value="outside-ne"> Outside NE</label>
+                    </div>
+                    
                 </div>
 
                 <!-- Basic Pay -->
@@ -60,32 +72,33 @@
                 <!-- Distance -->
                 <div class="form-group">
                     <label for="distance">Distance (in Km)</label>
-                    <input type="number" id="distance" name="distance" required>
+                    <input type="number" id="distance" name="distance" required value="300">
                 </div>
 
                 <!-- Number of Family Members -->
                 <div class="form-group">
-                    <label for="noOfFamilyMembers">No. of Family Members</label>
-                    <input type="number" id="noOfFamilyMembers" name="noOfFamilyMembers" placeholder="Excluding Self">
+                    <label for="numberOfFamilyMembers">No. of Family Members (optional)</label>
+                    <input type="number" id="numberOfFamilyMembers" name="numberOfFamilyMembers" placeholder="Excluding Self">
                 </div>
 
                 <!-- Number of Children -->
                 <div class="form-group">
-                    <label for="children">No. of Children</label>
-                    <input type="number" id="children" name="children" placeholder="Children below 12 years">
+                    <label for="numberOfChildren">No. of Children (optional)</label>
+                    <input type="number" id="numberOfChildren" name="numberOfChildren" placeholder="Children below 12 years">
                 </div>
 
                 <!-- Calculate Button -->
-                <div class="form-group">
-                    <button type="submit">Calculate</button>
-                </div>
+              <div class="form-group">
+                <button type="submit" class="submitTransferTA">Calculate</button>
             </form>
         </div>
     </main>
 
     <footer>
         <p>© 2025 @mumz7</p>
+
     </footer>
+    <script src="transferTAScript.js"></script>
 </body>
 
 </html>

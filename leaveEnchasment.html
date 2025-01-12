@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Leave Enchasment</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+
+    
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="daArrear.html">DA Arrear</a></li>
+                    <li><a href="transferTA.html">Transfer TA</a></li>
+                    <li><a href="leaveEnchasment.html">Leave Enchasment</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contactUs.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        
+    </header>
+    <main>
+        <div class="header">
+            <h1 class="title">Leave Enchasment</h1>
+            <p>Calculate your leave enchasment amount with ease.</p>
+        </div>
+
+        <div class="form-container">
+            <div class="container">
+                <form id="leaveEnchasmentForm">
+                   
+                        <div class="form-group">
+                            <label for="basicPay">Basic Pay</label>
+                            <input type="number" id="basicPay" name="basicPay" required min="17400" max="151700" value="38900">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="da">DA on the date of retirement</label>
+                            <input type="number" id="da" name="da" required value="46">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numberOfDays">Number of Days</label>
+                            <input type="number" id="numberOfDays" name="numberOfDays" required min="1" max="300" value="300">
+                        </div>
+
+                    <div class="form-group">
+                        <button class="submitLeaveEnchasment" type="submit">Calculate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>© 2021 Leave Enchasment. All Rights Reserved | Design by @mumz7</p>
+        </div>
+        <script src="leaveEncashment.js"></script>
+</body>
+
+</html>
